@@ -1,0 +1,202 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: #49a6e9;
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-secondary: hsla(182, 63%, 54%);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+    font-weight: bold;
+}
+h2{
+  /* margin:0; */
+}
+#home,
+#introduction,
+#projects,
+#experience,
+#skills {
+  height: 100vh;
+}
+#home,#experience,#skills {
+  background: var(--clr-white);
+}
+#introduction,#projects {
+  background: var( --clr-primary-10);
+}
+#nav-links{
+  list-style: none;
+}
+.nav-center{
+  /* display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; */
+}
+#nav-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.title{
+  text-align: center;
+}
+ .cover-photo
+{
+  background: url(./images/cover-photo.jpg) repeat scroll center center / cover;
+  height: 100vh;
+  width: 100%;
+  background-position-x: right;
+  /* opacity: 0.5; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cover-text{
+  border-right:2px solid #fff;
+  overflow: hidden;
+  animation:animate 3s steps(28) infinite;
+  white-space: nowrap;
+  font-size: 2.5rem;
+}
+@keyframes animate {
+  
+  0%{
+    width:0;
+  }
+  100%{
+    width:28ch;
+  }
+
+}
+.introduction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 2% 2% 2% 2%;
+    text-align: initial;
+}
+#exp-wrapper{
+  margin:10px;
+}
+ #exp-wrapper > div{
+    padding: 15px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#exp-info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+} 
+#exp-info div{
+  text-align: initial;
+}
+div > h3,h4,h5{
+  margin:0
+}
+#list{
+  list-style: none;
+}
+#skill-set{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: baseline;
+  margin:10px;
+}
+#skill-set > section{
+  padding:15px;
+  text-align: initial;
+}
+/*
+.nav-fixed-bar{
+    position: fixed;
+    width: 100%;
+    color: black;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(255,255,255,.4);
+    border-bottom: 1px solid #909090;
+    z-index: 10000;
+}
+
+@media screen and (max-width: 767px) {
+    .nav-fixed-bar {
+     display: none;
+    }
+  }
+.introduction{
+    text-align: center;
+    padding: 2% 2% 2% 2%;
+    font-size:35px;
+} */
