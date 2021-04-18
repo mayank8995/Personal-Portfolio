@@ -88,20 +88,25 @@ h2{
 #introduction,#projects {
   background: var( --clr-primary-10);
 }
-#nav-links{
-  list-style: none;
-}
 .nav-center{
   /* display:flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center; */
 }
-#nav-links{
+.links-container{
+  overflow: hidden;
+  /* --transition: all 0.3s linear; */
+  transition: var(--transition);
+}
+.nav-links{
+  list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
 .title{
   text-align: center;
@@ -178,6 +183,81 @@ div > h3,h4,h5{
   padding:15px;
   text-align: initial;
 }
+.nav-header{
+  display: none;
+}
+.links-container{
+  height: auto;
+}
+#_h_lg{
+  display: block;
+}
+#_h_lb{
+  display: none;
+}
+.logo{
+  width: auto;
+  max-width: 70px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 425px) {
+  #skill-set{
+    flex-direction: column;
+  }
+  #exp-wrapper > div{
+    flex-direction: column-reverse;
+  }
+  .nav-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin:0;
+    padding: revert;
+  }
+  .links-container{
+    height:0px;
+  }
+  .nav-header{
+    /* display: block; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 15px; */
+    padding: 0px 15px;
+  }
+  #_h_lg{
+    display: none;
+  }
+  #_h_lb{
+    display: block;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}
+
+
+
+
+
 /*
 .nav-fixed-bar{
     position: fixed;
