@@ -288,6 +288,7 @@ hr {
     justify-content: space-around;
     align-items: flex-start;
     margin:0;
+    margin-left: 5px;
     padding: revert;
   }
   .links-container{
@@ -351,6 +352,7 @@ hr {
     justify-content: space-around;
     align-items: flex-start;
     margin:0;
+    margin-left: 5px;
     padding: revert;
   }
   .links-container{
