@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -17,25 +17,30 @@ html {
 Variables
 ===============
 */
+
 :root {
   /* dark shades of primary color*/
   --clr-primary-1:hsl(205, 86%, 17%);
   --clr-primary-2:hsl(205, 77%, 27%);
   --clr-primary-3:hsl(205, 72%, 37%);
   --clr-primary-4:hsl(205, 63%, 48%);
+
   /* primary/main color */
   --clr-primary-5:#49a6e9;
+
   /* lighter shades of primary color */
   --clr-primary-6:hsl(205, 89%, 70%);
   --clr-primary-7:hsl(205, 90%, 76%);
   --clr-primary-8:hsl(205, 86%, 81%);
   --clr-primary-9:hsl(205, 90%, 88%);
   --clr-primary-10:hsl(205, 100%, 96%);
+
   /* darkest grey - used for headings */
   --clr-grey-1:hsl(209, 61%, 16%);
   --clr-grey-2:hsl(211, 39%, 23%);
   --clr-grey-3:hsl(209, 34%, 30%);
   --clr-grey-4:hsl(209, 28%, 39%);
+
   /* grey used for paragraphs */
   --clr-grey-5:hsl(210, 22%, 49%);
   --clr-grey-6:hsl(209, 23%, 60%);
@@ -67,24 +72,29 @@ Global Styles
 ===============
 */
 /* width */
+
 ::-webkit-scrollbar {
   width: 0px;
 }
 
 /* Track */
+
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
   background: #919191;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #919191;
+
+  &:hover {
+    background: #919191;
+  }
 }
 
 /* Handle on hover */
+
 header {
   position: fixed;
   top: 0;
@@ -98,6 +108,7 @@ header {
 #follow {
   background: var(--clr-primary-1);
   padding: 10px;
+
   /* height: 20vh; */
   display: flex;
   flex-direction: column;
@@ -135,6 +146,7 @@ i {
 
 .links-container {
   overflow: hidden;
+
   /* --transition: all 0.3s linear; */
   transition: var(--transition);
 }
@@ -154,10 +166,11 @@ i {
 }
 
 .cover-photo {
-  background: url(./images/cover-photo.jpg) repeat scroll center center/cover;
+  background: url(./images/cover-photo.jpg) repeat scroll center (center / cover);
   height: 100vh;
   width: 100%;
   background-position-x: right;
+
   /* opacity: 0.5; */
   display: flex;
   justify-content: center;
@@ -167,29 +180,21 @@ i {
 .cover-text {
   border-right: 2px solid #fff;
   overflow: hidden;
-  -webkit-animation: animate 3s steps(28) infinite;
-          animation: animate 3s steps(28) infinite;
+  animation: animate 3s steps(28) infinite;
   white-space: nowrap;
   font-size: 2.5rem;
-}
-
-@-webkit-keyframes animate {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 28ch;
-  }
 }
 
 @keyframes animate {
   0% {
     width: 0;
   }
+
   100% {
     width: 28ch;
   }
 }
+
 .introduction {
   display: flex;
   flex-direction: row;
@@ -202,11 +207,12 @@ i {
 
 #exp-wrapper {
   margin: 10px;
-}
-#exp-wrapper > div {
-  padding: 15px;
-  display: flex;
-  flex-direction: row-reverse;
+
+  > div {
+    padding: 15px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 
 #exp-info {
@@ -215,10 +221,12 @@ i {
   width: 50%;
   justify-content: center;
   align-items: center;
-}
-#exp-info div {
-  text-align: initial;
-  /* width: -webkit-fill-available; */
+
+  div {
+    text-align: initial;
+
+    /* width: -webkit-fill-available; */
+  }
 }
 
 div > h3, h4, h5 {
@@ -235,10 +243,11 @@ div > h3, h4, h5 {
   flex-direction: row;
   align-items: baseline;
   margin: 10px;
-}
-#skill-set > section {
-  padding: 15px;
-  text-align: initial;
+
+  > section {
+    padding: 15px;
+    text-align: initial;
+  }
 }
 
 .nav-header {
@@ -273,29 +282,24 @@ div > h3, h4, h5 {
   color: #fff;
   position: relative;
   top: 0;
-  -webkit-animation: slide 12s steps(4) infinite;
-          animation: slide 12s steps(4) infinite;
+  animation: slide 12s steps(4) infinite;
   text-transform: uppercase;
-}
-.dynamic-text li span {
-  position: relative;
-}
-.dynamic-text li span:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  /* width:100%; */
-  /* background: red; */
-  /* border-left: 2px solid #000; */
-  -webkit-animation: typing 3s steps(30) infinite;
-          animation: typing 3s steps(30) infinite;
-}
 
-@-webkit-keyframes slide {
-  100% {
-    top: -360px;
+  span {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+
+      /* width:100%; */
+      /* background: red; */
+      /* border-left: 2px solid #000; */
+      animation: typing 3s steps(30) infinite;
+    }
   }
 }
 
@@ -304,37 +308,35 @@ div > h3, h4, h5 {
     top: -360px;
   }
 }
-@-webkit-keyframes typing {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 30ch;
-    left: 100%;
-  }
-}
+
 @keyframes typing {
   0% {
     width: 0;
   }
+
   100% {
     width: 30ch;
     left: 100%;
   }
 }
+
 .projects {
   display: flex;
-}
-.projects > div {
-  padding: 15px;
-  /* display: flex; */
-  text-align: initial;
-  width: 33.33%;
+
+  > div {
+    padding: 15px;
+
+    /* display: flex; */
+    text-align: initial;
+    width: 33.33%;
+  }
 }
 
 #project-wrapper {
   margin: 10px;
 }
+
+.font-size-10 {}
 
 hr {
   border: none;
@@ -369,6 +371,7 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     /* padding: 15px; */
     padding: 0px 15px;
   }
@@ -405,15 +408,17 @@ hr {
   .projects {
     justify-content: space-between;
     flex-direction: column;
-  }
-  .projects > div {
-    width: 100%;
+
+    > div {
+      width: 100%;
+    }
   }
 
   #exp-info div {
     width: -webkit-fill-available;
   }
 }
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 426px) and (max-width: 650px) {
   #skill-set {
@@ -443,6 +448,7 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     /* padding: 15px; */
     padding: 0px 15px;
   }
@@ -479,15 +485,22 @@ hr {
   .projects {
     justify-content: space-between;
     flex-direction: column;
-  }
-  .projects > div {
-    width: 100%;
+
+    > div {
+      width: 100%;
+    }
   }
 
   #exp-info div {
     width: -webkit-fill-available;
   }
 }
+
 /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
 /* Large devices (laptops/desktops, 992px and up) */
-/* Extra large devices (large laptops and desktops, 1200px and up) *//*# sourceMappingURL=style.css.map */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
